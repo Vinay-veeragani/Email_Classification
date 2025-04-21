@@ -124,5 +124,3 @@ def mask_email(text, entities):
         end = entity['end']
         masked_text = masked_text[:start] + f"[{entity['type']}]" + masked_text[end:]
     return masked_text
-
-#Step 2 --- Applying PII masking to Original Dataset and Saving 
