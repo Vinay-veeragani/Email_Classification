@@ -16,11 +16,12 @@ This project detects and masks PII (Personally Identifiable Information) from em
 
 ##  Folder Structure
 
-- `app.py` – Flask backend (API only)
-- `app_gradio.py` – Gradio UI (for Hugging Face)
+- `app_flask.py` – Flask backend (API only)
+- `app.py` – Gradio UI (for Hugging Face)
 - `api.py` – API route logic
 - `models.py` – Model training, comparison, and saving
 - `utils.py` – PII detection and masking
+- 'Applying_PII_Masking'- Applying PII masking for Original data
 - `sbert_encoder_model/` – SBERT model
 - `sbert_final_model.pkl` – XGBoost classifier
 - `label_encoder.pkl` – Label encoder
