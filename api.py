@@ -29,4 +29,4 @@ def classify(email_text, sbert_model, classifier, label_encoder):
         "category_of_the_email": category
     }
 
-    return email_text, formatted_entities, masked_email, category, json_response
+    return  json_response, email_text, formatted_entities, masked_email, category
