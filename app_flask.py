@@ -6,8 +6,8 @@ from api import classify
 from utils import detect_pii
 app = Flask(__name__)
 
-# 🔄 Load models
-print("🔄 Loading models...")
+#  Load models
+print(" Loading models...")
 sbert_model = SentenceTransformer("sbert_encoder_model")
 classifier = joblib.load("sbert_final_model.pkl")
 label_encoder = joblib.load("label_encoder.pkl")
@@ -21,12 +21,12 @@ def classify_route():
     if not email_text:
         return Response(json.dumps({"error": "email_text is required"}), status=400, mimetype='application/json')
 
-    # ✅ Reuse shared function from api.py
+    # Reuse shared function from api.py
     category, masked_email, original_email, formatted_entities = classify(
         email_text, sbert_model, classifier, label_encoder
     )
 
-    # ✅ Strict output JSON format
+    #  Strict output JSON format
     response = {
         "input_email_body": original_email,
         "list_of_masked_entities": [
