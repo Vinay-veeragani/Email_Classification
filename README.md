@@ -1,4 +1,4 @@
-# 📧 Email Classifier with PII Masking (SBERT + XGBoost)
+# 📧 Email Classification for Support Team (with PII Masking (SBERT + XGBoost))
 
 This project detects and masks PII (Personally Identifiable Information) from emails and classifies the email into categories like `Request`, `Incident`, `Problem`, or `Change`.
 
@@ -21,7 +21,7 @@ This project detects and masks PII (Personally Identifiable Information) from em
 - `api.py` – API route logic
 - `models.py` – Model training, comparison, and saving
 - `utils.py` – PII detection and masking
-- 'Applying_PII_Masking.py'- Applying PII masking for Original data
+- `Applying_PII_Masking.py` – Applying PII masking for Original data
 - `sbert_encoder_model/` – SBERT model
 - `sbert_final_model.pkl` – XGBoost classifier
 - `label_encoder.pkl` – Label encoder
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_md
 
 # Run API server
-python app.py
+python app_flask.py
 
 # OR run Gradio UI (for local testing)
-python app_gradio.py
+python app.py
