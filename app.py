@@ -17,13 +17,14 @@ iface = gr.Interface(
         placeholder="Paste your email content here..."
     ),
     outputs=[
-        #gr.Textbox(label="📝 Original Email Body"),
-        #gr.Dataframe(headers=["Type", "Entity", "Position"], label="🛡️ Detected Entities"),
-        #gr.Textbox(label="🔒 Masked Email"),
-        #gr.Label(label="📬 Predicted Category"),
-        gr.JSON(label="📦 Strict API JSON Output") 
+        gr.JSON(label="📦 Strict API JSON Output"),
+        gr.Textbox(label="📝 Original Email Body"),
+        gr.Dataframe(headers=["Type", "Entity", "Position"], label="🛡️ Detected Entities"),
+        gr.Textbox(label="🔒 Masked Email"),
+        gr.Label(label="📬 Predicted Category")
+        
     ],
-    title="Email Classifier with PII Masking",
+    title="Email Classification for Support Team",
     description="This app masks PII and classifies emails using SBERT + XGBoost",
     allow_flagging="never"
 )
